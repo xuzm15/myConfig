@@ -1,0 +1,5 @@
+# 1
+/usr/bin/ld: cannot find -lxml2
+collect2: error: ld returned 1 exit status
+
+apt-get install libxml2-dev
