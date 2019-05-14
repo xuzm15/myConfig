@@ -17,6 +17,8 @@ sudo apt-get clean && sudo apt-get autoclean 清理无用的包
 sudo apt-get check 检查是否有损坏的依赖
 
 # record ali source
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo vi /etc/apt/sources.list
 deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
@@ -27,6 +29,8 @@ deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted univer
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+sudo apt-get update
+sudo apt-get upgrade
 
 # vim conf
 set nu
@@ -34,6 +38,11 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
+
+# oh-my-zsh
+sudo apt-get install zsh -y
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+chsh -s /bin/zsh
 
 # ali dns
 wget http://www.alidns.com/static/soft/SetAliDNS.sh -O SetAliDNS.sh && chmod +x SetAliDNS.sh && sudo ./SetAliDNS.sh
