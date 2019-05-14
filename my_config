@@ -34,9 +34,9 @@ sudo apt-get upgrade
 
 # vim conf
 set nu
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set mouse=a
+set ts=4
+set expandtab
 set autoindent
 
 # oh-my-zsh
